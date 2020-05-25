@@ -28,7 +28,7 @@ d3.json("data/buildings.json").then((data)=> {
                     .range(d3.schemeSet3);
 
     var rects = svg.selectAll("rect")
-                    .data(data)
+                    .data(data);
     rects.enter()
          .append("rect")
              .attr("x", (d) =>{return x(d.name)})
