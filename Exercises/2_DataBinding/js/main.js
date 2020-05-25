@@ -18,5 +18,5 @@ rects.enter()
          .attr("y", (d)=>{return 200-d})
          .attr("width", 40)
          .attr("height", (d)=>{return d})
-         .attr("style", "stroke:black")
+         .attr("style", "stroke:black;stroke-width:3")
          .attr("fill","darkred");
