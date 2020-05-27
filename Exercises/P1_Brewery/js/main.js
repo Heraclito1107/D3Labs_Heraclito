@@ -2,15 +2,6 @@
 *    main.js
 */
 
-/*
-*    main.js
-*/
-
-d3.json("data/revenues.json").then((data)=> {
-  	console.log(data);
-  	});
-
-
 var margin = {top: 10, right: 10, bottom: 140, left:100};
 var width = 600;
 var height = 400;
@@ -20,8 +11,6 @@ var g = d3.select("#chart-area").append("svg")
                                 	.attr("height", height + margin.top + margin.bottom)
                                   .append("g")
                                   .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
-
-
 
 d3.json("data/revenues.json").then((data)=> {
   	data.forEach((d)=>{
@@ -76,7 +65,6 @@ d3.json("data/revenues.json").then((data)=> {
       .style("fill","black")
       .text("Month");
 
-
     g.append("text")
     	.attr("class", "y axis-label")
     	.attr("x", - (height / 2))
@@ -86,6 +74,7 @@ d3.json("data/revenues.json").then((data)=> {
     	.attr("transform", "rotate(-90)")
     	.style("fill","black")
     	.text("Revenue (Dlls.)");
+
     }).catch((error)=>{
       console.log(error)
     });
