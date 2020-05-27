@@ -74,6 +74,10 @@ d3.json("data/revenues.json").then((data)=> {
     	.attr("transform", "rotate(-90)")
     	.style("fill","black")
     	.text("Revenue (Dlls.)");
+console.log("Hello World");
+    d3.interval( (d) => {
+    		console.log("Hello World");
+    	}, 1000);
 
     }).catch((error)=>{
       console.log(error)
